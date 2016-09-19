@@ -1,21 +1,26 @@
 <template>
   <div id="app">
-    <hello></hello>
+    <editor></editor>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello.vue'
+import Editor from './components/Editor.vue'
 
 export default {
   components: {
-    Hello
+    Editor
   }
 }
 </script>
 
+<style lang="css" src="./../node_modules/mmcss/dist/mm.css"></style>
+
 <style>
-body {
-  font-family: Helvetica, sans-serif;
+html,
+body,
+#app {
+  margin: 0;
+  height: 100%;
 }
 </style>
