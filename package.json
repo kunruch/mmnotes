@@ -25,6 +25,7 @@
     ]
   },
   "dependencies": {
+    "marked": "^0.3.6",
     "mmcss": "^0.2.3",
     "vue": "^2.0.0-rc.1"
   },

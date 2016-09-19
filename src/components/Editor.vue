@@ -1,15 +1,22 @@
 <template>
   <div class="editor">
     <textarea v-model="input" debounce="300"></textarea>
-    <div v-html="input | marked"></div>
+    <div class="editor-out" v-html="output"></div>
   </div>
 </template>
 
 <script>
+import Marked from 'marked';
+
 export default {
-  data () {
+  data() {
     return {
-      msg: 'Hello Vue!'
+      input: '# hello'
+    }
+  },
+  computed :{
+    output: function() { 
+      return Marked(this.input);
     }
   }
 }
@@ -23,7 +30,7 @@ export default {
 
 
 textarea, 
-.editor div {
+.editor-out {
   display: inline-block;
   width: 49%;
   height: 100%;
@@ -34,6 +41,7 @@ textarea,
   box-sizing: border-box;
   padding: 0 20px;
   border-radius: 0;
+  overflow-y: auto;
 }
 
 textarea {
@@ -48,6 +56,10 @@ textarea {
 textarea, textarea:focus {
   border: none;
   border-right: 1px solid #ccc;
+}
+
+.editor-out {
+  padding-bottom: 100px;  
 }
 
 code {

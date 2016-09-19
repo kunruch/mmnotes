@@ -22,5 +22,6 @@ body,
 #app {
   margin: 0;
   height: 100%;
+  font-size: 14px;
 }
 </style>
