@@ -7,16 +7,30 @@
 
 <script>
 import Marked from 'marked';
+import todoStorage from './../store.js';
 
 export default {
   data() {
     return {
-      input: '# hello'
+      input: todoStorage.fetch()
     }
   },
   computed :{
     output: function() { 
-      return Marked(this.input);
+      if(this.input.length != 0) {
+        return Marked(this.input);
+      }
+      else {
+        return "";
+      }
+    }
+  },
+  // watch changes for localStorage persistence
+  watch: {
+    input: {
+      handler: function (input) {
+        todoStorage.save(input);
+      }
     }
   }
 }
@@ -26,6 +40,10 @@ export default {
 .editor {
   margin: 0;
   height: 100%;
+}
+
+.editor h1:first-child {
+  margin-top: 20px;
 }
 
 

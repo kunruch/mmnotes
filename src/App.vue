@@ -1,5 +1,10 @@
 <template>
   <div id="app">
+    <header class="header">
+      <div class="header-left">
+        MMNotes
+      </div>
+    </header>
     <editor></editor>
   </div>
 </template>
