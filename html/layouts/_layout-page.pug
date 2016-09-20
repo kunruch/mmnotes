@@ -2,9 +2,24 @@ extends ./_layout-main.pug
 
 block content
     article
-        .sub-header-dark.section-large.text-center
+        .sub-header.section-large.text-center
             .container-readable
                 h1.section-title #{title}
                 p.text-muted.text-large #{description}
         .section-medium.container-readable
             block page-content
+    
+    footer.footer
+        .container-content.section-large.text-center
+            div.thumbnail-medium.aligncenter
+                //include ./../partials/_mmnotes.svg
+            p Built with <a href="https://mmpilot.kunruchcreations.com">MMPilot</a> by <a href="http://kunruchcreations.com/">KunRuch Creations</a>.
+                br
+                | Licensed under the <a href="#{site.github}blob/master/LICENSE.md" target="blank">MIT License</a>.
+            div
+                a.button.button-text(href=site.github, target="_blank")
+                    //| <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
+                    span GitHub
+                a.button.button-text(href=site.twitter, target="_blank")
+                    //| <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+                    span Twitter
