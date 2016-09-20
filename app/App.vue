@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-    <header class="header">
-      <div class="header-left">
-        MMNotes
-      </div>
-    </header>
     <editor></editor>
   </div>
 </template>
@@ -19,14 +14,21 @@ export default {
 }
 </script>
 
-<style lang="css" src="./../node_modules/mmcss/dist/mm.css"></style>
-
 <style>
 html,
-body,
-#app {
+body {
   margin: 0;
   height: 100%;
   font-size: 14px;
+}
+
+#app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 42px;
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 </style>

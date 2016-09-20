@@ -50,14 +50,13 @@ export default {
 textarea, 
 .editor-out {
   display: inline-block;
-  width: 49%;
+  width: 50%;
   height: 100%;
   margin: 0;
   vertical-align: top;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 20px;
   border-radius: 0;
   overflow-y: auto;
 }
@@ -65,10 +64,11 @@ textarea,
 textarea {
   resize: none;
   outline: none;
+  float: left;
   background-color: #f6f6f6;
   font-size: 14px;
   font-family: 'Monaco', courier, monospace;
-  padding: 20px;
+  padding: 20px 20px 60px;
 }
 
 textarea, textarea:focus {
@@ -77,7 +77,8 @@ textarea, textarea:focus {
 }
 
 .editor-out {
-  padding-bottom: 100px;  
+  float: right;
+  padding: 0 20px 60px;
 }
 
 code {

@@ -1,0 +1,15 @@
+extends ./layouts/_layout-main.pug
+
+block vars
+    - var title = 'Minimal modern notes online'
+    - var description = 'A modern online note taking app with minimal UI and markdown support. Write notes without distraction.'
+
+
+block styles
+    link(href='/styles/app.css', rel='stylesheet')
+
+block content
+  div#app
+  
+block scripts
+    script(src='/scripts/app.js')
