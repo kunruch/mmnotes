@@ -1,0 +1,15 @@
+branches:
+  only:
+  - master
+language: node_js
+node_js:
+- '4'
+before_script:
+- git remote set-url origin "https://${GH_TOKEN}@github.com/kunruch/mmcss.git"
+- git config --global user.email "kanishk.kunal@hotmail.com"
+- git config --global user.name "Travis-CI"
+script:
+- npm run deploy
+env:
+  global:
+    secure: q6YEqbFp4X/DFyeiz8TkEc2z9VVES/84pBc9U9vkGSs03wpyrr9CIiDOnNuHOFAU/9ZWwdOym7/JQaIQv3csXtvwD0fnHPGk5LpyZQgx4dEtxXlwDKwLXscR7wVz7T7utTR3kC6wqEZsmQZU+IbwKEw1/rA7Z2ERZvJqO2ab0DRq6A9rcYvwJJeUijsFwfz7+mvisYKCqYnJ6XwTJ1dSUndd9HxerCSeMBK0M+gNzf0n0+QrYUHBwQwqUeCD2V4aTQOLef2PrU7VJMo2eUJS+rbaY89gJjfU4QyJMMlBmBPVux5yH3WadhgWTWk8EYMZkqiOH6q8/jpdXD1cyScstP0+J9rDlxKjyihRmW13q4XxJkhicA8AkfSY8xuDWo0RR9bl8v901RcFl/+AdaoIj5HZbuHxGTgG3CvpejynNrwOBD//7oLJXg8ARt0WokWPOsdAWiYcN37cn0lTo51HTZK1tWgGG9k0KedNn297XXf7ld9Q3eReRUW/ALJKGAzjSWnkgmeZrZkdoZFmIfsUl8YtC1V7tlIN8FBVBgO1TtEFcfpDqVorPERRa9pneo/JAGhyNZ/UCKcy2PMo51D2EdhPzm8F79JXky/OjLTHNp/K6bfXjgeanhu7L2YVPSwOdsMdR0t2feN+jKyRGmaib7u8fVc6uomgkyKWQM1EDRM=
