@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kunruch/mmnotes.svg?branch=master)](https://travis-ci.org/kunruch/mmnotes)
+
 # mmnotes
 
 > A minimal modern online note taking app
@@ -20,5 +22,3 @@ npm run lint
 # run unit tests
 npm test
 ```
-
-For more information see the [docs for vueify](https://github.com/vuejs/vueify).
