@@ -24,7 +24,7 @@
     "build-app": "npm run mk-dest && cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o public/styles/app.css ] -e app/main.js | uglifyjs -c warnings=false -m > public/scripts/app.js",
     "build-pages": "mmpilot build",
     "build": "npm run build-pages && npm run build-app",
-    "deploy": "npm run clean && npm run build && mmpilot deploy"
+    "deploy": "npm run clean && npm run build && firebase deploy"
   },
   "browserify": {
     "transform": [
