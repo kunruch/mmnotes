@@ -13,24 +13,22 @@
   "homepage": "https://mmnotes.kunruchcreations.com/",
   "scripts": {
     "clean": "mmpilot clean",
-    "mk-dest": "shx mkdir -p public/scripts",
-    "dev-build-app": "npm run mk-dest && browserify -e app/main.js -o public/scripts/app.js",
-    "dev-build-pages": "mmpilot clean && mmpilot build -d",
-    "dev-watch-app": "npm run mk-dest && watchify -vd -p browserify -e app/main.js -o public/scripts/app.js",
-    "dev-watch-pages": "mmpilot watch -d",
+    "build": "mmpilot build",
     "serve": "mmpilot serve",
-    "dev": "npm-run-all dev-build-pages --parallel dev-watch-app dev-watch-pages serve",
+    "dev-build": "mmpilot build -d",
+    "dev-watch": "mmpilot watch -d",
+    "dev": "npm-run-all clean dev-build --parallel dev-watch serve",
     "lint": "eslint --ext .js,.vue app",
-    "build-app": "npm run mk-dest && cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o public/styles/app.css ] -e app/main.js | uglifyjs -c warnings=false -m > public/scripts/app.js",
-    "build-pages": "mmpilot build",
-    "build": "npm run build-pages && npm run build-app",
-    "deploy": "npm run clean && npm run build && firebase deploy"
+    "deploy": "npm-run-all clean build && firebase deploy"
   },
   "browserify": {
     "transform": [
       "vueify",
       "babelify"
     ]
+  },
+  "engines": {
+    "node": ">=4.2.2"
   },
   "dependencies": {
     "firebase": "^3.4.0",
@@ -62,6 +60,7 @@
     "proxyquireify": "^3.0.1",
     "shx": "^0.1.4",
     "uglify-js": "^2.5.0",
+    "uglifyify": "^3.0.3",
     "vueify": "^9.2.4",
     "watchify": "^3.4.0"
   }
