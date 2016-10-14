@@ -6,22 +6,21 @@
 </template>
 
 <script>
-import Marked from 'marked';
-import todoStorage from './../store.js';
+import Marked from 'marked'
+import todoStorage from './../store.js'
 
 export default {
-  data() {
+  data () {
     return {
       input: todoStorage.fetch()
     }
   },
-  computed :{
-    output: function() { 
-      if(this.input.length != 0) {
-        return Marked(this.input);
-      }
-      else {
-        return "";
+  computed: {
+    output: function () {
+      if (this.input.length !== 0) {
+        return Marked(this.input)
+      } else {
+        return ''
       }
     }
   },
@@ -29,7 +28,7 @@ export default {
   watch: {
     input: {
       handler: function (input) {
-        todoStorage.save(input);
+        todoStorage.save(input)
       }
     }
   }
@@ -47,7 +46,7 @@ export default {
 }
 
 
-textarea, 
+textarea,
 .editor-out {
   display: inline-block;
   width: 50%;
