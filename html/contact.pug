@@ -1,0 +1,11 @@
+extends ./_layouts/_layout-page.pug
+
+block vars
+    - var title = 'Contact'
+    - var description = 'Contact the MM Notes team'
+
+block page-content
+    p.text-center Please use the #[a(href=site.github + "issues/new", target="_blank") Issues] section to report issues in the MM Notes app.
+      br
+      | If you have any other query or feedback then kindly get in touch using the contact form below.
+    iframe(src="https://contact.kunruchcreations.com/mmnotes", width="100%", height="900", frameborder="0", scrolling="no") Browser not supported
