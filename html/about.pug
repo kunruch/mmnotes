@@ -1,64 +1,64 @@
 extends ./_layouts/_layout-page.pug
 
 block vars
-    - var title = 'About'
-    - var description = 'Learn about MM Notes, get to know people behind this app and find out guidelines for using MM Notes logo and name.'
+  - var title = 'About'
+  - var description = 'Learn about MM Notes, get to know people behind this app and find out guidelines for using MM Notes logo and name.'
 
 block page-content
+  p.
+    MM Notes is a minimal modern note taking app which allows you to write in markdown or plain text and automatically saves your edits in browser's cache.
+    You can draft a note, write posts, articles or use it to jot together a todo list.
+
+  p.
+    Primary goal of MM Notes is to be a lightweight utility for note taking in the browser. With the distraction free UI and auto-saving, you can focus easily on your writing.
+
+  .section
+    h2#people People
+    hr
+    p MM Notes is maintained by the <a href="http://kunruchcreations.com/" target="_blank">KunRuch Creations</a> team. Find below key people invloved with this project:
+      div
+        media.media-left
+          .thumbnail-small
+            img(src="https://secure.gravatar.com/avatar/bb9bf20fb6f55b4af10b0f98c540075f?s=112&d=mm&r=g").thumbnail-rounded
+          .media-body
+            h3 Kanishk Kunal
+            div.text-muted.text-small
+              a(href="https://twitter.com/kanishkkunal", target="_blank")
+                | <svg class="icon icon-github"><use xlink:href="#icon-twitter"></use></svg> @kanishkkunal
+
+        media.media-left
+          .thumbnail-small
+            img(src="https://secure.gravatar.com/avatar/0c7120ee72d4031538d8bf0b0a39a803?s=112&d=mm&r=g").thumbnail-rounded
+          .media-body
+            h3 Monika Ratan
+            div.text-muted.text-small
+              a(href="https://twitter.com/monikaratan", target="_blank")
+                | <svg class="icon icon-github"><use xlink:href="#icon-twitter"></use></svg> @monikaratan
+  .section
+    h2#branding Branding
+    hr
+    p Kindly follow the following brand guidelines and use the given assets when writing about MM Notes or referring to it in your projects.
+    h3#branding-name Name
+    p When referring to MM Notes you can either use <strong>MM Notes</strong> or <strong>mmnotes</strong>.
+    h3#branding-logo Logo
     p.
-      MM Notes is a minimal modern note taking app which allows you to write in markdown or plain text and automatically saves your edits in browser's cache.
-      You can draft a note, write posts, articles or use it to jot together a todo list.
+      Use the following SVG logo when denoting MM Notes. Kindly don't
+        change the colors as the same logo with different colors could mean a different project (See: <a href="http://mmcss.kunruchcreations.com/" target="_blank">MMCSS</a>)
 
-    p.
-      Primary goal of MM Notes is to be a lightweight utility for note taking in the browser. With the distraction free UI and auto-saving, you can focus easily on your writing.
+    p.text-center
+      a(href="/img/mmnotes.svg")
+        span.thumbnail-medium.aligncenter
+          include ./_includes/_mmnotes.svg
+        span.text-small Download SVG
+    h3#branding-colors Colors
+    p Following colors represent MM Notes and can be used in relation with it.
+    div.section.text-center
+      div(style="display:inline-block;")
+        div(style="background-color:#6c529e;width:120px;height:120px;border-radius:3px;margin-right:3px;")
+        div.text-small.text-center #6c529e
+      div(style="display:inline-block;")
+        div(style="background-color:#e0e0e0;width:120px;height:120px;border-radius:3px;margin-left:3px;")
+        div.text-small.text-center #e0e0e0
 
-    .section
-      h2#people People
-      hr
-      p MM Notes is maintained by the <a href="http://kunruchcreations.com/" target="_blank">KunRuch Creations</a> team. Find below key people invloved with this project:
-        div
-          media.media-left
-            .thumbnail-small
-              img(src="https://secure.gravatar.com/avatar/bb9bf20fb6f55b4af10b0f98c540075f?s=112&d=mm&r=g").thumbnail-rounded
-            .media-body
-              h3 Kanishk Kunal
-              div.text-muted.text-small
-                a(href="https://twitter.com/kanishkkunal", target="_blank")
-                  | <svg class="icon icon-github"><use xlink:href="#icon-twitter"></use></svg> @kanishkkunal
-
-          media.media-left
-            .thumbnail-small
-              img(src="https://secure.gravatar.com/avatar/0c7120ee72d4031538d8bf0b0a39a803?s=112&d=mm&r=g").thumbnail-rounded
-            .media-body
-              h3 Monika Ratan
-              div.text-muted.text-small
-                a(href="https://twitter.com/monikaratan", target="_blank")
-                  | <svg class="icon icon-github"><use xlink:href="#icon-twitter"></use></svg> @monikaratan
-    .section
-      h2#branding Branding
-      hr
-      p Kindly follow the following brand guidelines and use the given assets when writing about MM Notes or referring to it in your projects.
-      h3#branding-name Name
-      p When referring to MM Notes you can either use <strong>MM Notes</strong> or <strong>mmnotes</strong>.
-      h3#branding-logo Logo
-      p.
-        Use the following SVG logo when denoting MM Notes. Kindly don't
-         change the colors as the same logo with different colors could mean a different project (See: <a href="http://mmcss.kunruchcreations.com/" target="_blank">MMCSS</a>)
-
-      p.text-center
-        a(href="/img/mmnotes.svg")
-          span.thumbnail-medium.aligncenter
-            include ./_includes/_mmnotes.svg
-          span.text-small Download SVG
-      h3#branding-colors Colors
-      p Following colors represent MM Notes and can be used in relation with it.
-      div.section.text-center
-        div(style="display:inline-block;")
-          div(style="background-color:#6c529e;width:120px;height:120px;border-radius:3px;margin-right:3px;")
-          div.text-small.text-center #6c529e
-        div(style="display:inline-block;")
-          div(style="background-color:#e0e0e0;width:120px;height:120px;border-radius:3px;margin-left:3px;")
-          div.text-small.text-center #e0e0e0
-
-    .section
-      p For any queries kindly <a href="http://kunruchcreations.com/about-us/contact/" target="_blank">contact us</a>.
+  .section
+    p For any queries kindly <a href="http://kunruchcreations.com/about-us/contact/" target="_blank">contact us</a>.

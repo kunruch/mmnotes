@@ -1,14 +1,19 @@
 <template>
-  <div id="app">
-    <editor></editor>
+  <div>
+    <editor-header></editor-header>
+    <div class="editor-container">
+      <editor></editor>
+    </div>
   </div>
 </template>
 
 <script>
+import EditorHeader from './components/EditorHeader.vue'
 import Editor from './components/Editor.vue'
 
 export default {
   components: {
+    EditorHeader,
     Editor
   }
 }
@@ -21,7 +26,7 @@ body {
   height: 100%;
 }
 
-#app {
+.editor-container {
   position: fixed;
   top: 0;
   left: 0;
