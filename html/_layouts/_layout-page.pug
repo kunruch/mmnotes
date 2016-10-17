@@ -3,9 +3,11 @@ extends ./_layout-main.pug
 block content
   header.header
     .container
-      include ./../_includes/_header-branding.pug
+      .header-left
+        include ./../_includes/_header-branding.pug
       div MM Notes
-      include ./../_includes/_header-menu.pug
+      .header-right
+        include ./../_includes/_header-menu.pug
   article
     .sub-header.section-large.text-center
       .container-readable
